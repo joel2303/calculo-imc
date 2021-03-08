@@ -3,6 +3,7 @@ body {
     margin: 0%;
     padding: 0%;
     background-color: rgba(255, 255, 255, 0.664);
+
 }
 
 #container {
@@ -22,14 +23,23 @@ p {
     color: black;
     font-size: 13.8px;
 }
+h2 {
+    text-align: left;
+}
 #cabecalho {
     height: 100px;
     padding-top: 1px;
-    background-color: rgba(31, 32, 34, 0.884);
+    background-color: rgb(31, 32, 34);
     color: rgb(255, 255, 255);
     font-size: 19pt;
     text-align: center;
 }
+#box1 h1 {
+    text-align: left;
+}
+
+/* LADO ESQUERDO DO SITE */
+
 #box1 {
     width: 500px;
     height: 800px;
@@ -45,6 +55,9 @@ p {
     border-radius: 5px;
     border: 2px solid rgba(54, 50, 50, 0.658);
 }
+
+/* TRABALHANDO O LADO DIREITO DO SITE*/
+
 #box2 {
     width: 480px;
     height: 800px;
@@ -55,95 +68,140 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 0.795);
 }
+#titulo {
+    text-align: left;
+}
 #calculo {
-    width: 463px;
-    height: 181px;
-    background-color: #ecf0f1;
+    width: 445px;
+    height: 173px;
+    background-color:  #ecf0f1;
+    border-radius: 5px;
     border: 2px solid rgba(54, 50, 50, 0.658);
+    padding: 10px;
+    outline: none;
+
+}
+/* TODA PARTE DO BOX PARA CALCULAR O IMC */
+input {
+    outline: none;
+    width: 150px;
+    height: 15px;
+    background-color: #f2f2f2;
+    padding: 3px;
+    border: 1px solid rgba(54, 50, 50, 0.658);
+    border-radius: 5px;
+    color: #333;
+}
+#formulario {
+    width: 243px;
+    height: 170px;
+    background-color:  #ecf0f1;
     border-radius: 5px;
     padding: 5px;
-    
-}
-form, label{
-    padding: 8px;
-    display: block;
+    float: left;
 }
 form {
-    width: 277px;
-    margin: 8px;
-    background-color: rgba(31, 32, 34, 0.884);
-    border-radius: 5px;
-}
-label {
-    color: rgb(255, 255, 255);
-    text-align: right;
-}
-input {
-    display: inline-block;
-    padding-left: 8px;
+    color: rgb(31, 32, 34);
+    font-size: 12.4px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: bolder;
     outline: none;
+    
 }
+
+/* DIV DOS INPUTS DE ENVIAR/RESETAR */
+
 #enviar {
-    width: 150px;
-    height: 173px;
-    background-color: #327788;
-    border-radius: 5px;
-    padding: 2px;
+    width: 185px;
+    height: 160px;
     float: right;
-    flex-direction: row-reverse;
-}
+    text-align: center;
 
-#enviar1 {
-    width: 120px;
-    float: right;
-    height: 85px;
-    background-color: rgba(31, 32, 34, 0.884);
-    color: white;
+}
+#enviar1,#enviar2 {
+    margin-top: 15px;
+    margin-right: 100px;
+    width: 180px;
+    height: 70px;
+    background-color:rgb(31, 32, 34);
+    color:rgb(219, 219, 219);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Shippori Mincho', serif;
+    border: 0 none;
+    outline: 0;
+}
 
-}
-#enviar2 {
-    width: 120px;
-    float: right;
-    height: 85px;
-    background-color: rgba(31, 32, 34, 0.884);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* TODA PARTE DO BOX DE RESULTADO */
+
 #resul {
-    width: 463px;
+    width: 450px;
     margin-top: 10px;
     height: 240px;
-    background-color: rgb(219, 219, 219);
-    padding: 5px;
-    margin-right: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: white;
+    border: 2px solid rgba(54, 50, 50, 0.658);
+
 }
-#resul, h1 {
+#resul, h1,h3 {
     text-align: center;
+}
+#resultotal {
+    display: none;
+}
+#resul1 {
+    width: 170px;
+    height: 237px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    margin-right: 0px;
+    float: left;
+    color: rgba(31, 32, 34, 0.884) ;
+    font-size: 15px;
+}
+
+#resul2 {
+    width: 250px;
+    height: 237px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    margin-right: 0px;
+    float: right;
+    color: rgba(31, 32, 34, 0.884) ;
+    font-size: 15px;
+  
+}
+#tabela {
+    border: 1px solid black;
+    height: 210px;
+}
+td {
+    border: 1px solid black;
 }
 #footer {
     text-align: center;
     color: rgb(255, 255, 255);
     letter-spacing: 3px;   
-    background: rgba(31, 32, 34, 0.884);
+    background: rgb(31, 32, 34);
     position:absolute;
     bottom:0; 
     width:1000px;
     margin-top: 10px;
 }
+
+/* TIRAR AS SETAS DOS INPUTS NUMBERS*/
+
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
     
@@ -153,3 +211,4 @@ input[type=number] {
    appearance: textfield;
 
 }
+

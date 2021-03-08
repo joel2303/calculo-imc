@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,56 +9,103 @@
     <link rel="stylesheet" href="style.css">
     <title>Índice de Massa Corporal.</title>
 </head>
+
 <body>
-        <div id="container">
-            <header id="cabecalho">
-                <h1 > Índice de Massa Corporal. </h1>
-            </header>
-            <div id="box1">
-                <h1 id="titulo">Sobre o ÍMC </h1>
-                <p>Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
-                <img id="img"src="imagens/imc.jpg" alt="Biotipos">
-                <h2 id="titulo">E por que ter o peso ideal? </h2>
-                <p>Não somente para ter um corpo bonito, manter o peso ideal é essencial para a manutenção da saúde. Contudo, ser magro não é sinônimo de ter um corpo saudável. Para ser saudável, o peso precisa estar de acordo com o IMC (Índice de Massa Corporal).</p>
-                <p>Assim como, de acordo com o Ministério da Saúde, 53,8% da população brasileira está em sobrepeso. Isso não se relaciona somente à beleza e estética. Ter um corpo saudável e estar em dia com a balança significa evitar a proliferação de doenças.
-           
-            </div>
-            <div id="box2">
-                <h1 id="titulo">Calculando seu ÍMC </h1>
-                <p>Para calcular seu IMC, basta preencher com seus dados e o resultado aparecerá logo abaixo !</p>
-                <br>
-                <div id="calculo">
-                    <div id="formulario">
-                        <form>
-                        <label for="nome"> Nome: 
+    <div id="container">
+        <header id="cabecalho">
+            <h1> Índice de Massa Corporal. </h1>
+        </header>
+        <div id="box1">
+            <h1 id="titulo">Sobre o ÍMC </h1>
+            <p>Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla
+                IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
+            <img id="img" src="imagens/imc.jpg" alt="Biotipos">
+            <h2 id="titulo">E por que ter o peso ideal? </h2>
+            <p>Não somente para ter um corpo bonito, manter o peso ideal é essencial para a manutenção da saúde.
+                Contudo, ser magro não é sinônimo de ter um corpo saudável. Para ser saudável, o peso precisa estar de
+                acordo com o IMC (Índice de Massa Corporal).</p>
+            <p>Assim como, de acordo com o Ministério da Saúde, 53,8% da população brasileira está em sobrepeso. Isso
+                não se relaciona somente à beleza e estética. Ter um corpo saudável e estar em dia com a balança
+                significa evitar a proliferação de doenças.
+
+        </div>
+        <div id="box2">
+            <h1 id="titulo">Calculando seu ÍMC </h1>
+            <p>Para calcular seu IMC, basta preencher com seus dados e o resultado aparecerá logo abaixo !</p>
+            <br>
+            <div id="calculo">
+                <div id="formulario">
+                    <form action="resetar" id="resetar">
+                        <label for="nome">Nome: </label>
                         <input type="text" name="nome" id="nome">
-                        </label>
-                        <label> Idade: 
-                        <input type="number" name="idade" id="idade">
-                        </label>
-                        <label> Peso:
+
+                        <label for="idade">Idade: </label>
+                        <input type="number" name="Nome" id="idade">
+
+                        <label for="altura"> Altura: </label>
+                        <input type="text" name="altura" id="altura">
+
+                        <label for="peso">Peso: </label>
                         <input type="number" name="peso" id="peso">
-                        </label>
-                        <label> Altura: 
-                        <input type="number" name="peso" id="peso">
-                        </label>
-                        </form>
-                    </div>
-                    <div id="enviar">
-                        <input type="button" value="Calcular" id="enviar1">
-                        <input type="reset" value="Resetar" id="enviar2">
-                    </div>
-                    
+                    </form>
                 </div>
-                <div id="resul">
-                    <h1>Resultado</h1>
+
+                <div id="enviar">
+                    <input type="button" value="Enviar" id="enviar1" onclick="verificar()">
+                    <br>
+
+                    <input type="reset" form="resetar" value="Resetar" id="enviar2" name="resetar" onclick="resetar()">
+
+
                 </div>
 
             </div>
-            <div id="footer">
-                @J
+            <div id="resul">
+                <div id="resul1">
+                    <h1>Seu ÍMC</h1>
+                    <h3 id="resultotal"></h3>
+                </div>
+                <div id="resul2">
+                    <table id="tabela">
+                        <tr>
+                            <td><b>Classificação</b></td>
+                            <td><b>ÍMC</b></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>Abaixo do Peso</td>
+                            <td>Abaixo 18,5</td>
+                        </tr>
+                        <tr>
+                            <td>Peso Normal</td>
+                            <td>18,5 - 24,9</td>
+                        </tr>
+                        <tr>
+                            <td>Sobrepeso</td>
+                            <td>25 - 29,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Grau l</td>
+                            <td>30 - 34,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Grau ll</td>
+                            <td>35 - 39,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Mórbida</td>
+                            <td>Maior ou Igual 40</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>  
+
+        </div>
+        <div id="footer">
+            @JoelJ.Silva
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
